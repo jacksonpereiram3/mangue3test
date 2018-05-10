@@ -338,14 +338,6 @@ $(document).ready(function(){
                     scrollTop: $(target).offset().top
                 }, 500);
             });
-
-            $('a#open-clients-info').on( "click", function() {
-                event.preventDefault();
-                var target = "#" + this.getAttribute('data-target');
-                $('body').animate({
-                    scrollTop: $(target).offset().top
-                }, 500);
-            });
         } 
 
         else {
