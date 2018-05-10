@@ -331,7 +331,14 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
 
-            $('a#open-more-info').on( "click", function() {
+            $('#open-more-info').on( "click", function() {
+                event.preventDefault();
+                var target = "#" + this.getAttribute('data-target');
+                $('body').animate({
+                    scrollTop: $(target).offset().top
+                }, 500);
+            });
+            $('#open-clients-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
