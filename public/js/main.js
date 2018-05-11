@@ -100,35 +100,35 @@ $(document).ready(function(){
      * @param {string} status 
      * 
      */
-    function toggleRightSideForm (status = null) {
-        if (status === 'hidden') {
-            right_side_form.toggleClass('hidden');
-            setTimeout(function(){
-                right_side_form.toggleClass("hide-right");
-                $("#close-right-side-form").toggleClass("hide-close");
-                $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-                setTimeout(function() {
-                    $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
-                        scrollInertia:500,
-                        callbacks:false
-                    });
-                }, 350);
-            }, 100);
-        } else {
-            right_side_form.toggleClass("hide-right");
-            $("#close-right-side-form").toggleClass("hide-close");
-            $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            setTimeout(function() {
-                $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
-                    scrollInertia:500,
-                    callbacks:false
-                });
-            }, 350);
-            setTimeout(function(){
-                right_side_form.toggleClass('hidden');
-            }, 500);
-        }
-    }
+    // function toggleRightSideForm (status = null) {
+    //     if (status === 'hidden') {
+    //         right_side_form.toggleClass('hidden');
+    //         setTimeout(function(){
+    //             right_side_form.toggleClass("hide-right");
+    //             $("#close-right-side-form").toggleClass("hide-close");
+    //             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+    //             setTimeout(function() {
+    //                 $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+    //                     scrollInertia:500,
+    //                     callbacks:false
+    //                 });
+    //             }, 350);
+    //         }, 100);
+    //     } else {
+    //         right_side_form.toggleClass("hide-right");
+    //         $("#close-right-side-form").toggleClass("hide-close");
+    //         $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+    //         setTimeout(function() {
+    //             $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+    //                 scrollInertia:500,
+    //                 callbacks:false
+    //             });
+    //         }, 350);
+    //         setTimeout(function(){
+    //             right_side_form.toggleClass('hidden');
+    //         }, 500);
+    //     }
+    // }
 
     /**
      * abre ou fecha a tela de clients
@@ -136,35 +136,35 @@ $(document).ready(function(){
      * @param {string} status  
      * 
      */
-    function toggleRightSideClients (status = null) {
-        if (status === 'hidden') {
-            right_side_clients.toggleClass('hidden');
-            setTimeout(function(){
-                right_side_clients.toggleClass("hide-right-clients");
-                $("#close-right-side-clients").toggleClass("hide-close");
-                $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-                setTimeout(function() {
-                    $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
-                        scrollInertia:500,
-                        callbacks:false
-                    });
-                }, 350);
-            }, 100);
-        } else {
-            right_side_clients.toggleClass("hide-right-clients");
-            $("#close-right-side-clients").toggleClass("hide-close");
-            $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            setTimeout(function() {
-                $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
-                    scrollInertia:500,
-                    callbacks:false
-                });
-            }, 350);
-            setTimeout(function(){
-                right_side_clients.toggleClass('hidden');
-            }, 500);
-        }
-    }
+    // function toggleRightSideClients (status = null) {
+    //     if (status === 'hidden') {
+    //         right_side_clients.toggleClass('hidden');
+    //         setTimeout(function(){
+    //             right_side_clients.toggleClass("hide-right-clients");
+    //             $("#close-right-side-clients").toggleClass("hide-close");
+    //             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+    //             setTimeout(function() {
+    //                 $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
+    //                     scrollInertia:500,
+    //                     callbacks:false
+    //                 });
+    //             }, 350);
+    //         }, 100);
+    //     } else {
+    //         right_side_clients.toggleClass("hide-right-clients");
+    //         $("#close-right-side-clients").toggleClass("hide-close");
+    //         $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+    //         setTimeout(function() {
+    //             $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
+    //                 scrollInertia:500,
+    //                 callbacks:false
+    //             });
+    //         }, 350);
+    //         setTimeout(function(){
+    //             right_side_clients.toggleClass('hidden');
+    //         }, 500);
+    //     }
+    // }
 
     /**
      * verifica se o formulário de contato já foi aberto
@@ -332,6 +332,7 @@ $(document).ready(function(){
             $('body').addClass('scroll-touch');
 
             $('#open-more-info').on( "click", function() {
+                
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
@@ -351,7 +352,7 @@ $(document).ready(function(){
             $('body').mCustomScrollbar({
                 scrollInertia: 150,
                 axis            :"y"
-            });  
+            });
         }
     }
   
