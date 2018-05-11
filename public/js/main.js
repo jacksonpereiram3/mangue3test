@@ -323,7 +323,7 @@ $(document).ready(function(){
         });
     });
 
-    var ifTouchDevices = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone)/);
+    var ifTouchDevices = window.matchMedia("(max-width: 1024px)").matches;
 
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
     function scrollbar(){
