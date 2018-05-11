@@ -220,27 +220,27 @@ $(document).ready(function(){
      * abre a tela de form
      * 
     */
-    // $('a#open-more-info').on( "click", function() {
-    //     var right_side_form_is_hiden         = right_side_form.hasClass('hidden');
-    //     var right_side_clients_form_is_hiden = right_side_clients.hasClass('hidden');
-    //     var overlay_has_skew_part            = overlay.hasClass('skew-part');
+    $('a#open-more-info').on( "click", function() {
+        var right_side_form_is_hiden         = right_side_form.hasClass('hidden');
+        var right_side_clients_form_is_hiden = right_side_clients.hasClass('hidden');
+        var overlay_has_skew_part            = overlay.hasClass('skew-part');
 
-    //     switchToggleForm(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
+        switchToggleForm(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
         
-    // });
+    });
 
     /** 
      * abre a tela de clients
      * 
     */
-    // $('a#open-clients-info').on( "click", function() {
-    //     var right_side_form_is_hiden         = right_side_form.hasClass('hidden');
-    //     var right_side_clients_form_is_hiden = right_side_clients.hasClass('hidden');
-    //     var overlay_has_skew_part            = overlay.hasClass('skew-part');
+    $('a#open-clients-info').on( "click", function() {
+        var right_side_form_is_hiden         = right_side_form.hasClass('hidden');
+        var right_side_clients_form_is_hiden = right_side_clients.hasClass('hidden');
+        var overlay_has_skew_part            = overlay.hasClass('skew-part');
 
-    //     switchToggleClient(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
+        switchToggleClient(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
         
-    // });
+    });
 
     /**
      * fecha a tela de form
