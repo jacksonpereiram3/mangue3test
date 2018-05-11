@@ -339,12 +339,11 @@ $(document).ready(function(){
                 }, 500);
             });
             $('#open-clients-info').on( "click", function() {
-                event.preventDefault(e);
+                event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
                     scrollTop: $(target).offset().top
                 }, 500);
-                return alert(e);
             });
         } 
 
