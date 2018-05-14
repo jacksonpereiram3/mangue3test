@@ -335,7 +335,7 @@ $(document).ready(function(){
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
-                    scrollTop: $(target).offset().top
+                    scrollTop: $('#right-side').offset().top
                 }, 100);
                
             });
@@ -343,7 +343,7 @@ $(document).ready(function(){
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
-                    scrollTop: $(target).offset().top
+                    scrollTop: $("#right-side-clients").offset().top
                 }, 100);
                alert("Scroll Client");
             });
