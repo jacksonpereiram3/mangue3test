@@ -337,6 +337,7 @@ $(document).ready(function(){
                 $('body').animate({
                     scrollTop: $(target).offset().top
                 }, 100);
+                alert('Scroll');
             });
         } 
         
