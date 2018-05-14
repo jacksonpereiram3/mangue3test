@@ -329,7 +329,7 @@ $(document).ready(function(){
     function scrollbar(){
         
         if (ifTouchDevices){
-            //$('body').addClass('scroll-touch');
+            $('body').addClass('scroll-touch');
             
             $('#open-more-info').on( "click", function() {
                 event.preventDefault();
