@@ -347,7 +347,6 @@ $(document).ready(function(){
                     scrollTop: $(target).offset().top-0
                 }, 100);
                 alert("Clientes");
-                $('body').animate({scrollTop})
             });
         }
         
