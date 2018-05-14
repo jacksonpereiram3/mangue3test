@@ -336,7 +336,7 @@ $(document).ready(function(){
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
                     scrollTop: $(target).offset().top
-                }, 100);
+                }, 500);
                 alert("Contato");
             });
             
@@ -345,7 +345,7 @@ $(document).ready(function(){
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
                     scrollTop: $(target).offset().top
-                }, 100);
+                }, 500);
                 alert("Clientes");
             });
         }
