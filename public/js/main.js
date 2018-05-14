@@ -323,7 +323,7 @@ $(document).ready(function(){
         });
     });
     
-    var ifTouchDevices = window.matchMedia("(max-width: 1024px)").matches;
+    var ifTouchDevices = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone)/);
     
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
     function scrollbar(){
@@ -338,13 +338,14 @@ $(document).ready(function(){
                     scrollTop: $('#right-side').offset().top
                 }, 100);
             });
-            
+
             $('#open-clients-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
                     scrollTop: $("#right-side-clients").offset().top
                 }, 100);
+
             });
         } 
         
