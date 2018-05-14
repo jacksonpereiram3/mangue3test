@@ -346,6 +346,7 @@ $(document).ready(function(){
                 scrollInertia: 150,
                 axis            :"y"
             });
+            alert("No Scroll");
         }
     }
     
