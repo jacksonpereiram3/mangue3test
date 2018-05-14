@@ -331,7 +331,7 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            $('#open-more-info').on( "click", function() {
+            $('a#open-more-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
@@ -339,7 +339,7 @@ $(document).ready(function(){
                 }, 100);
             });
 
-            $('#open-clients-info').on( "click", function() {
+            $('a#open-clients-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
