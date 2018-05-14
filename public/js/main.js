@@ -328,7 +328,7 @@ $(document).ready(function(){
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
     function scrollbar(){
         
-        if (ifTouchDevices){
+        // if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
             $('a#open-more-info').on( "click", function() {
@@ -345,16 +345,15 @@ $(document).ready(function(){
                 $('body').animate({
                     scrollTop: $(target).offset().top
                 }, 100);
-
             });
-        } 
+        // } 
         
-        else {
-            $('body').mCustomScrollbar({
-                scrollInertia: 150,
-                axis            :"y"
-            });
-        }
+        // else {
+        //     $('body').mCustomScrollbar({
+        //         scrollInertia: 150,
+        //         axis            :"y"
+        //     });
+        // }
     }
     
     scrollbar();
