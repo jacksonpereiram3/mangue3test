@@ -246,10 +246,10 @@ body {
   height: 100%;
 }
 
-/* .scroll-touch {
+.scroll-touch {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-} */
+}
 
 body, html {
   margin: 0;
