@@ -337,7 +337,15 @@ $(document).ready(function(){
                 $('body').animate({
                     scrollTop: $(target).offset().top
                 }, 100);
-                alert('Scroll');
+               
+            });
+            $('#open-clients-info').on( "click", function() {
+                event.preventDefault();
+                var target = "#" + this.getAttribute('data-target');
+                $('body').animate({
+                    scrollTop: $(target).offset().top
+                }, 100);
+               alert("Scroll Client");
             });
         } 
         
@@ -346,7 +354,6 @@ $(document).ready(function(){
                 scrollInertia: 150,
                 axis            :"y"
             });
-            alert("No Scroll");
         }
     }
     
