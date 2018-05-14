@@ -337,15 +337,14 @@ $(document).ready(function(){
                 $('body').animate({
                     scrollTop: $('#right-side').offset().top
                 }, 100);
-               
             });
+            
             $('#open-clients-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
                 $('body').animate({
                     scrollTop: $("#right-side-clients").offset().top
                 }, 100);
-               alert("Scroll Client");
             });
         } 
         
