@@ -227,6 +227,11 @@ $(document).ready(function(){
         
         switchToggleForm(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
         
+        event.preventDefault();
+        var target = "#" + this.getAttribute('data-target');
+        $('body').animate({
+            scrollTop: $(target).offset().top
+        }, 500);    
     });
     
     /** 
@@ -240,6 +245,11 @@ $(document).ready(function(){
         
         switchToggleClient(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
         
+        event.preventDefault();
+        var target = "#" + this.getAttribute('data-target');
+        $('body').animate({
+            scrollTop: $(target).offset().top
+        }, 500);
     });
     
     /**
