@@ -227,11 +227,6 @@ $(document).ready(function(){
         
         switchToggleForm(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
         
-        event.preventDefault();
-        var target = "#" + this.getAttribute('data-target');
-        $('body').animate({
-            scrollTop: $(target).offset().top
-        }, 500);    
     });
     
     /** 
@@ -245,11 +240,6 @@ $(document).ready(function(){
         
         switchToggleClient(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
         
-        event.preventDefault();
-        var target = "#" + this.getAttribute('data-target');
-        $('body').animate({
-            scrollTop: $(target).offset().top
-        }, 500);
     });
     
     /**
@@ -336,39 +326,39 @@ $(document).ready(function(){
     var ifTouchDevices = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone)/);
     
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
-    // function scrollbar(){
+    function scrollbar(){
         
-    //     if (ifTouchDevices){
-    //         $('body').addClass('scroll-touch');
+        if (ifTouchDevices){
+            $('body').addClass('scroll-touch');
             
-    //         $('a#open-more-info').on( "click", function() {
-    //             event.preventDefault();
-    //             var target = "#" + this.getAttribute('data-target');
-    //             $('body').animate({
-    //                 scrollTop: $(target).offset().top
-    //             }, 500);
-    //             alert("Contato");
-    //         });
+            $('a#open-more-info').on( "click", function() {
+                event.preventDefault();
+                var target = "#" + this.getAttribute('data-target');
+                $('body').animate({
+                    scrollTop: $(target).offset().top
+                }, 500);
+                alert("Contato");
+            });
             
-    //         $('a#open-clients-info').on( "click", function() {
-    //             event.preventDefault();
-    //             var target = "#" + this.getAttribute('data-target');
-    //             $('body').animate({
-    //                 scrollTop: $(target).offset().top
-    //             }, 500);
-    //             alert("Clientes");
-    //         });
-    //     }
+            $('a#open-clients-info').on( "click", function() {
+                event.preventDefault();
+                var target = "#" + this.getAttribute('data-target');
+                $('body').animate({
+                    scrollTop: $(target).offset().top
+                }, 500);
+                alert("Clientes");
+            });
+        }
         
-    //     else {
-    //         $('body').mCustomScrollbar({
-    //             scrollInertia: 150,
-    //             axis            :"y"
-    //         });
-    //     }
-    // }
+        else {
+            $('body').mCustomScrollbar({
+                scrollInertia: 150,
+                axis            :"y"
+            });
+        }
+    }
     
-    // scrollbar();
+    scrollbar();
     
     // Tooltips used on YouTube buttons
     if (window.matchMedia("(min-width: 1025px)").matches) { 
