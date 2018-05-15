@@ -336,7 +336,7 @@ $(document).ready(function(){
                 var target = "#" + this.getAttribute('data-target');
                 $('html, body').animate({
                     scrollTop: $(target).offset().top
-                }, 500, 'swing');
+                }, 700, 'swing');
             });
             
             $('a#open-clients-info').on( "click", function() {
@@ -344,7 +344,7 @@ $(document).ready(function(){
                 var target = "#" + this.getAttribute('data-target');
                 $('html, body').animate({
                     scrollTop: $(target).offset().top
-                }, 500, 'swing');
+                }, 700, 'swing');
             });
         }
         
