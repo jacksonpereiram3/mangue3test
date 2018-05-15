@@ -2017,6 +2017,7 @@ footer p {
   position: absolute;
   bottom: 0;
   left: 50%;
+  margin-left: -12px;
 }
 .cards footer.designation .social ul {
   padding: 0;
