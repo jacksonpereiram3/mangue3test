@@ -337,7 +337,6 @@ $(document).ready(function(){
                 $('html, body').animate({
                     scrollTop: $(target).offset().top
                 }, 500, 'swing');
-                alert("Contato");
             });
             
             $('a#open-clients-info').on( "click", function() {
@@ -346,7 +345,6 @@ $(document).ready(function(){
                 $('html, body').animate({
                     scrollTop: $(target).offset().top
                 }, 500, 'swing');
-                alert("Clientes");
             });
         }
         
