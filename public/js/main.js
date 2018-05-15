@@ -334,18 +334,18 @@ $(document).ready(function(){
             $('a#open-more-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
-                $('body').animate({
+                $('html, body').animate({
                     scrollTop: $(target).offset().top
-                }, 500);
+                }, 500, 'swing');
                 alert("Contato");
             });
             
             $('a#open-clients-info').on( "click", function() {
                 event.preventDefault();
                 var target = "#" + this.getAttribute('data-target');
-                $('body').animate({
+                $('html, body').animate({
                     scrollTop: $(target).offset().top
-                }, 500);
+                }, 500, 'swing');
                 alert("Clientes");
             });
         }
