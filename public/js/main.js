@@ -103,6 +103,8 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
+            right_side_form.removeClass("opened");
+
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
                 $("#close-right-side-form").toggleClass("hide-close");
@@ -140,6 +142,8 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
+            right_side_clients.removeClass("opened");
+
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
                 $("#close-right-side-clients").toggleClass("hide-close");
@@ -154,7 +158,6 @@ $(document).ready(function(){
         } else {
             right_side_clients.toggleClass("hide-right-clients");
             right_side_clients.addClass("opened");
-            
             $("#close-right-side-clients").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
