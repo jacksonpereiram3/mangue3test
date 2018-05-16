@@ -335,14 +335,14 @@ $(document).ready(function(){
                 $('a#open-more-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
-                    $('html, body').animate({
+                    $('html, body').delay(500).animate({
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
                 });
                 $('a#open-clients-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
-                    $('html, body').animate({
+                    $('html, body').delay(500).animate({
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
                 });
