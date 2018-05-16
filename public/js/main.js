@@ -331,23 +331,24 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            if(right_side_form.hasClass('hidden') && !right_side_clients.hasClass('hidden')){
+            if(right_side_form.hasClass('hidden') && right_side_clients.hasClass('hidden')){
                 $('a#open-more-info').on( "click", function() {
-                    event.preventDefault();
-                    var target = "#" + this.getAttribute('data-target');
-                    $('html, body').delay(500).animate({
-                        scrollTop: $(target).offset().top
-                    }, 700, 'swing');
+                    if(right_side_form.hasClass('hidden')){
+                        event.preventDefault();
+                        var target = "#" + this.getAttribute('data-target');
+                        $('html, body').animate({
+                            scrollTop: $(target).offset().top
+                        }, 700, 'swing');
+                    }
                 });
-            }
-            
-            if(!right_side_form.hasClass('hidden') && right_side_clients.hasClass('hidden')){
                 $('a#open-clients-info').on( "click", function() {
-                    event.preventDefault();
-                    var target = "#" + this.getAttribute('data-target');
-                    $('html, body').delay(500).animate({
-                        scrollTop: $(target).offset().top
-                    }, 700, 'swing');
+                    if(right_side_clients.hasClass('hidden')){
+                        event.preventDefault();
+                        var target = "#" + this.getAttribute('data-target');
+                        $('html, body').animate({
+                            scrollTop: $(target).offset().top
+                        }, 700, 'swing');
+                    }
                 });
             }
         }
