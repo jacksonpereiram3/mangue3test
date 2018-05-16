@@ -117,7 +117,7 @@ $(document).ready(function(){
             }, 100);
         } else {
             right_side_form.toggleClass("hide-right");
-            right_side_form.toggleClass("opened");
+            right_side_form.toggleClass("open");
             $("#close-right-side-form").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
@@ -155,7 +155,7 @@ $(document).ready(function(){
             }, 100);
         } else {
             right_side_clients.toggleClass("hide-right-clients");
-            right_side_clients.toggleClass("opened");
+            right_side_clients.toggleClass("open");
             $("#close-right-side-clients").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
