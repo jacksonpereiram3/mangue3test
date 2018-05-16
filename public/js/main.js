@@ -222,10 +222,10 @@ $(document).ready(function(){
     */
     $('a#open-more-info').on( "click", function() {
         var right_side_form_is_hiden         = right_side_form.hasClass('hidden');
-        var right_side_clients_form_is_hiden = right_side_clients.hasClass('hidden');
+        var right_side_clients_is_hiden = right_side_clients.hasClass('hidden');
         var overlay_has_skew_part            = overlay.hasClass('skew-part');
         
-        switchToggleForm(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
+        switchToggleForm(right_side_form_is_hiden,right_side_clients_is_hiden,overlay_has_skew_part);
         
     });
     
@@ -235,10 +235,10 @@ $(document).ready(function(){
     */
     $('a#open-clients-info').on( "click", function() {
         var right_side_form_is_hiden         = right_side_form.hasClass('hidden');
-        var right_side_clients_form_is_hiden = right_side_clients.hasClass('hidden');
+        var right_side_clients_is_hiden = right_side_clients.hasClass('hidden');
         var overlay_has_skew_part            = overlay.hasClass('skew-part');
         
-        switchToggleClient(right_side_form_is_hiden,right_side_clients_form_is_hiden,overlay_has_skew_part);
+        switchToggleClient(right_side_form_is_hiden,right_side_clients_is_hiden,overlay_has_skew_part);
         
     });
     
@@ -328,7 +328,7 @@ $(document).ready(function(){
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
     function scrollbar(){
         
-        if (ifTouchDevices && (!switchToggleClient || !switchToggleForm)){
+        if (ifTouchDevices && (right_side_clients_is_hiden || !right_side_form_is_hiden)){
             $('body').addClass('scroll-touch');
             
             $('a#open-more-info').on( "click", function() {
