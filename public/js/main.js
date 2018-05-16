@@ -331,7 +331,7 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            if(toggleRightSideForm('hidden') || toggleRightSideClients('hidden')){
+            if(toggleRightSideForm() || toggleRightSideClients()){
                 $('a#open-more-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
