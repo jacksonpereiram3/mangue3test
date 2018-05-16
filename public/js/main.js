@@ -333,7 +333,7 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            if(toggleRightSideClients(null)){
+            if(toggleRightSideForm()){
                 $('a#open-more-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
@@ -342,7 +342,7 @@ $(document).ready(function(){
                     }, 700, 'swing');
                 });
             }
-            if(toggleRightSideClients(null)){
+            if(toggleRightSideClients()){
                 $('a#open-clients-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
