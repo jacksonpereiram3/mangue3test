@@ -328,7 +328,7 @@ $(document).ready(function(){
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
     function scrollbar(){
         
-        if (ifTouchDevices && (right_side_clients_is_hiden || !right_side_form_is_hiden)){
+        if (ifTouchDevices && (right_side_clients_is_hiden || right_side_form_is_hiden)){
             $('body').addClass('scroll-touch');
             
             $('a#open-more-info').on( "click", function() {
