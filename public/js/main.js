@@ -103,7 +103,7 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
-
+            
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
                 $("#close-right-side-form").toggleClass("hide-close");
@@ -140,7 +140,7 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
-
+            
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
                 $("#close-right-side-clients").toggleClass("hide-close");
@@ -333,6 +333,7 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
+            if(toggleRightSideClients(null)){
                 $('a#open-more-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
@@ -340,6 +341,8 @@ $(document).ready(function(){
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
                 });
+            }
+            if(toggleRightSideClients(null)){
                 $('a#open-clients-info').on( "click", function() {
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
@@ -347,6 +350,7 @@ $(document).ready(function(){
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
                 });
+            }
         }
         
         else {
