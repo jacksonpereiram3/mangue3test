@@ -333,24 +333,20 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            if(right_side_form.hasClass('')){
-                $('a#open-more-info').on( "click", function() {
-                    event.preventDefault();
-                    var target = "#" + this.getAttribute('data-target');
-                    $('html, body').animate({
-                        scrollTop: $(target).offset().top
-                    }, 700, 'swing');
-                });
-            }
-            if(right_side_clients.hasClass('')){
-                $('a#open-clients-info').on( "click", function() {
-                    event.preventDefault();
-                    var target = "#" + this.getAttribute('data-target');
-                    $('html, body').animate({
-                        scrollTop: $(target).offset().top
-                    }, 700, 'swing');
-                });
-            }
+            $('a#open-more-info').on( "click", function() {
+                event.preventDefault();
+                var target = "#" + this.getAttribute('data-target');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 700, 'swing');
+            });
+            $('a#open-clients-info').on( "click", function() {
+                event.preventDefault();
+                var target = "#" + this.getAttribute('data-target');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 700, 'swing');
+            });
         }
         
         else {
