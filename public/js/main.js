@@ -328,24 +328,27 @@ $(document).ready(function(){
     // ScrollBar on Desktop, not on Touch devices for a perfect ergonomy
     function scrollbar(){
         
-        if (ifTouchDevices && (!right_side_clients_is_hiden || !right_side_form_is_hiden)){
+        if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            $('a#open-more-info').on( "click", function() {
-                event.preventDefault();
-                var target = "#" + this.getAttribute('data-target');
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 700, 'swing');
-            });
-            
-            $('a#open-clients-info').on( "click", function() {
-                event.preventDefault();
-                var target = "#" + this.getAttribute('data-target');
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 700, 'swing');
-            });
+            if(!right_side_clients_is_hiden){
+                $('a#open-more-info').on( "click", function() {
+                    event.preventDefault();
+                    var target = "#" + this.getAttribute('data-target');
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 700, 'swing');
+                });
+            }
+            else if (!right_side_form_is_hiden){
+                $('a#open-clients-info').on( "click", function() {
+                    event.preventDefault();
+                    var target = "#" + this.getAttribute('data-target');
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 700, 'swing');
+                });
+            }
         }
         
         else {
