@@ -333,7 +333,7 @@ $(document).ready(function(){
             
             if(right_side_form.hasClass('hidden') && right_side_clients.hasClass('hidden')){
                 $('a#open-more-info').on( "click", function() {
-                    if(!right_side_form.hasClass('hidden')){
+                    if(!right_side_form.hasClass('hidden') && right_side_clients.hasClass('hidden')){
                         event.preventDefault();
                         var target = "#" + this.getAttribute('data-target');
                         $('html, body').animate({
@@ -342,7 +342,7 @@ $(document).ready(function(){
                     }
                 });
                 $('a#open-clients-info').on( "click", function() {
-                    if(!right_side_clients.hasClass('hidden')){
+                    if(!right_side_clients.hasClass('hidden') && right_side_form.hasClass('hidden')){
                         event.preventDefault();
                         var target = "#" + this.getAttribute('data-target');
                         $('html, body').animate({
