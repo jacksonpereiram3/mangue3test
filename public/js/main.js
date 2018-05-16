@@ -154,7 +154,7 @@ $(document).ready(function(){
         } else {
             right_side_clients.toggleClass("hide-right-clients");
             right_side_clients.addClass("opened");
-
+            
             $("#close-right-side-clients").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
@@ -334,25 +334,21 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            if(right_side_form.hasClass('hidden') && right_side_clients.hasClass('hidden')){
-                if(!right_side_form.hasClass('hidden') && right_side_clients.hasClass('hidden')){
-                    $('a#open-more-info').on( "click", function() {
-                        event.preventDefault();
-                        var target = "#" + this.getAttribute('data-target');
-                        $('html, body').animate({
-                            scrollTop: $(target).offset().top
-                        }, 700, 'swing');
-                    });
-                }
-                if(!right_side_clients.hasClass('hidden') && right_side_form.hasClass('hidden')){
-                    $('a#open-clients-info').on( "click", function() {
-                        event.preventDefault();
-                        var target = "#" + this.getAttribute('data-target');
-                        $('html, body').animate({
-                            scrollTop: $(target).offset().top
-                        }, 700, 'swing');
-                    });
-                }
+            if(right_side_form.hasClass('opened') || right_side_clients.hasClass('opened')){
+                $('a#open-more-info').on( "click", function() {
+                    event.preventDefault();
+                    var target = "#" + this.getAttribute('data-target');
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 700, 'swing');
+                });
+                $('a#open-clients-info').on( "click", function() {
+                    event.preventDefault();
+                    var target = "#" + this.getAttribute('data-target');
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 700, 'swing');
+                });
             }
         }
         
