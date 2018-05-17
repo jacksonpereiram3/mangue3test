@@ -126,7 +126,7 @@ $(document).ready(function(){
                 });
             }, 350);
             setTimeout(function(){
-                right_side_form.toggleClass('open');
+                right_side_form.toggleClass('hidden');
             }, 500);
         }
     }
@@ -164,7 +164,7 @@ $(document).ready(function(){
                 });
             }, 350);
             setTimeout(function(){
-                right_side_clients.toggleClass('open');
+                right_side_clients.toggleClass('hidden');
             }, 500);
         }
     }
