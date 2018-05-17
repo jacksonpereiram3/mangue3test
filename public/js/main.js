@@ -103,6 +103,8 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
+            right_side_form.removeClass("open");
+
             
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
@@ -117,6 +119,7 @@ $(document).ready(function(){
             }, 100);
         } else {
             right_side_form.toggleClass("hide-right");
+            right_side_form.addClass("open");
             $("#close-right-side-form").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
@@ -140,6 +143,8 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
+            right_side_clients.removeClass("open");
+
             
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
@@ -154,6 +159,8 @@ $(document).ready(function(){
             }, 100);
         } else {
             right_side_clients.toggleClass("hide-right-clients");
+            right_side_clients.addClass("open");
+            
             $("#close-right-side-clients").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
