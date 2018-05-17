@@ -103,6 +103,9 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
+            if(right_side_form.hasClass('open')){
+                right_side_form.removeClass('open');
+            }
             
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
@@ -126,7 +129,8 @@ $(document).ready(function(){
                 });
             }, 350);
             setTimeout(function(){
-                right_side_form.addClass('open');
+                right_side_form.addClass('hidden');
+                right_side_form.addss('open');
             }, 350);
         }
     }
@@ -140,6 +144,9 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
+            if(right_side_clients.hasClass('open')){
+                right_side_clients.removeClass('open');
+            }
             
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
@@ -164,7 +171,8 @@ $(document).ready(function(){
                 });
             }, 350);
             setTimeout(function(){
-                right_side_clients.toggleClass('open');
+                right_side_clients.toggleClass('hidden');
+                right_side_clients.addClass('open');
             }, 500);
         }
     }
