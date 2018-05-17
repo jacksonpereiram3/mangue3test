@@ -131,7 +131,7 @@ $(document).ready(function(){
             }, 350);
         }
         if(!right_side_form.hasClass('hidden')){
-            right_side_form.toggleClass('open');
+            right_side_form.addClass('open');
         }else{
             right_side_form.removeClass('open');
         }
@@ -174,7 +174,7 @@ $(document).ready(function(){
             }, 500);
         }
         if(!right_side_clients.hasClass('hidden')){
-            right_side_clients.toggleClass('open');
+            right_side_clients.addClass('open');
         }else{
             right_side_clients.removeClass('open');
         }
