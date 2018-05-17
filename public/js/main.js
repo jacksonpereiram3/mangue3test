@@ -110,7 +110,7 @@ $(document).ready(function(){
                 $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
                 setTimeout(function() {
                     $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
-                        scrollInertia:0,
+                        scrollInertia:500,
                         callbacks:false
                     });
                 }, 350);
@@ -121,7 +121,7 @@ $(document).ready(function(){
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
             setTimeout(function() {
                 $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
-                    scrollInertia:0,
+                    scrollInertia:500,
                     callbacks:false
                 });
             }, 350);
