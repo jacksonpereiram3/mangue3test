@@ -103,9 +103,7 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
-            if(right_side_form.hasClass('open')){
-                right_side_form.removeClass('open');
-            }
+                right_side_form.toggleClass('open',false);
             
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
@@ -118,7 +116,7 @@ $(document).ready(function(){
                     });
                 }, 350);
             }, 100);
-        } else if (status === 'open') {
+        } else {
             right_side_form.toggleClass("hide-right");
             $("#close-right-side-form").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
@@ -130,7 +128,7 @@ $(document).ready(function(){
             }, 350);
             setTimeout(function(){
                 right_side_form.addClass('hidden');
-                right_side_form.addss('open');
+                right_side_form.toggleClass('open',true);
             }, 350);
         }
     }
@@ -144,9 +142,7 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
-            if(right_side_clients.hasClass('open')){
-                right_side_clients.removeClass('open');
-            }
+                right_side_clients.toggleClass('open',false);
             
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
@@ -159,7 +155,7 @@ $(document).ready(function(){
                     });
                 }, 350);
             }, 100);
-        } else if (status === 'open') {
+        } else {
             right_side_clients.toggleClass("hide-right-clients");
             
             $("#close-right-side-clients").toggleClass("hide-close");
@@ -172,7 +168,7 @@ $(document).ready(function(){
             }, 350);
             setTimeout(function(){
                 right_side_clients.toggleClass('hidden');
-                right_side_clients.addClass('open');
+                right_side_clients.toggleClass('open',true);
             }, 500);
         }
     }
