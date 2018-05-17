@@ -103,10 +103,6 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
-            if(right_side_form.hasClass('hidden')){
-                right_side_form.toggleClass('open');
-            }
-            console.log(right_side_form.hasClass('hidden'));
             
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
@@ -131,11 +127,13 @@ $(document).ready(function(){
             }, 350);
             setTimeout(function(){
                 right_side_form.toggleClass('hidden');
-                if(!right_side_form.hasClass('hidden')){
-                    right_side_form.toggleClass('open');
-                }
-                console.log(right_side_form.hasClass('hidden'));
+               
             }, 350);
+        }
+        if(!right_side_form.hasClass('hidden')){
+            right_side_form.toggleClass('open');
+        }else{
+            right_side_form.removeClass('open');
         }
     }
     
@@ -148,11 +146,7 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
-            if(right_side_clients.hasClass('hidden')){
-                right_side_clients.toggleClass('open');
-            }
-            console.log(right_side_clients.hasClass('hidden'));
-            
+           
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
                 $("#close-right-side-clients").toggleClass("hide-close");
@@ -177,11 +171,12 @@ $(document).ready(function(){
             }, 350);
             setTimeout(function(){
                 right_side_clients.toggleClass('hidden');
-                if(!right_side_clients.hasClass('hidden')){
-                    right_side_clients.toggleClass('open');
-                }
-                console.log(right_side_clients.hasClass('hidden'));
             }, 500);
+        }
+        if(!right_side_clients.hasClass('hidden')){
+            right_side_clients.toggleClass('open');
+        }else{
+            right_side_clients.removeClass('open');
         }
     }
     
