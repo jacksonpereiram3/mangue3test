@@ -103,7 +103,10 @@ $(document).ready(function(){
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
-                right_side_form.toggleClass('open',false);
+            if(right_side_form.hasClass('hidden')){
+                right_side_form.toggleClass('open');
+            }
+            console.log(right_side_form.hasClass('hidden'));
             
             setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
@@ -127,8 +130,11 @@ $(document).ready(function(){
                 });
             }, 350);
             setTimeout(function(){
-                right_side_form.addClass('hidden');
-                right_side_form.toggleClass('open',true);
+                right_side_form.toggleClass('hidden');
+                if(!right_side_form.hasClass('hidden')){
+                    right_side_form.toggleClass('open');
+                }
+                console.log(right_side_form.hasClass('hidden'));
             }, 350);
         }
     }
@@ -142,7 +148,10 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
-                right_side_clients.toggleClass('open',false);
+            if(right_side_clients.hasClass('hidden')){
+                right_side_clients.toggleClass('open');
+            }
+            console.log(right_side_clients.hasClass('hidden'));
             
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
@@ -168,7 +177,10 @@ $(document).ready(function(){
             }, 350);
             setTimeout(function(){
                 right_side_clients.toggleClass('hidden');
-                right_side_clients.toggleClass('open',true);
+                if(!right_side_clients.hasClass('hidden')){
+                    right_side_clients.toggleClass('open');
+                }
+                console.log(right_side_clients.hasClass('hidden'));
             }, 500);
         }
     }
