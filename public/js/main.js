@@ -116,15 +116,15 @@ $(document).ready(function(){
                 }, 350);
             }, 100);
         } else if (status === 'open') {
-            // right_side_form.toggleClass("hide-right");
-            // $("#close-right-side-form").toggleClass("hide-close");
-            // $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            // setTimeout(function() {
-            //     $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
-            //         scrollInertia:500,
-            //         callbacks:false
-            //     });
-            // }, 350);
+            right_side_form.toggleClass("hide-right");
+            $("#close-right-side-form").toggleClass("hide-close");
+            $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+            setTimeout(function() {
+                $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+                    scrollInertia:500,
+                    callbacks:false
+                });
+            }, 350);
             setTimeout(function(){
                 right_side_form.addClass('open');
             }, 350);
@@ -153,16 +153,16 @@ $(document).ready(function(){
                 }, 350);
             }, 100);
         } else if (status === 'open') {
-            // right_side_clients.toggleClass("hide-right-clients");
+            right_side_clients.toggleClass("hide-right-clients");
             
-            // $("#close-right-side-clients").toggleClass("hide-close");
-            // $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            // setTimeout(function() {
-            //     $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
-            //         scrollInertia:500,
-            //         callbacks:false
-            //     });
-            // }, 350);
+            $("#close-right-side-clients").toggleClass("hide-close");
+            $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+            setTimeout(function() {
+                $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
+                    scrollInertia:500,
+                    callbacks:false
+                });
+            }, 350);
             setTimeout(function(){
                 right_side_clients.toggleClass('open');
             }, 500);
