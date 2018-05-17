@@ -194,11 +194,11 @@ $(document).ready(function(){
     function switchToggleForm (right_side_form_is_hiden, right_side_clients_is_hiden, overlay_has_skew_part){
         if ( !right_side_form_is_hiden && !overlay_has_skew_part ) {
             overlay.toggleClass('skew-part');
-            toggleRightSideForm('open');
+            toggleRightSideForm();
         } 
         else if ( right_side_form_is_hiden && !overlay_has_skew_part && !right_side_clients_is_hiden ) {
             toggleRightSideClients('hidden');
-            toggleRightSideForm('open');
+            toggleRightSideForm();
         } else if ( right_side_form_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideForm('hidden');
@@ -219,11 +219,11 @@ $(document).ready(function(){
     function switchToggleClient (right_side_form_is_hiden, right_side_clients_is_hiden, overlay_has_skew_part){
         if ( !right_side_clients_is_hiden && !overlay_has_skew_part ) {
             overlay.toggleClass('skew-part');
-            toggleRightSideClients('open');
+            toggleRightSideClients();
         } 
         else if ( right_side_clients_is_hiden && !overlay_has_skew_part && !right_side_form_is_hiden ) {
             toggleRightSideForm('hidden');
-            toggleRightSideClients('open');
+            toggleRightSideClients();
         } else if ( right_side_clients_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideClients('hidden');
@@ -345,25 +345,25 @@ $(document).ready(function(){
         if (ifTouchDevices){
             $('body').addClass('scroll-touch');
             
-            if(right_side_form.hasClass('open')){
-                $('a#open-more-info').on( "click", function() {
+            $('a#open-more-info').on( "click", function() {
+                if(right_side_form.hasClass('open')){
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
                     $('html, body').animate({
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
+                }
                 });
-            }
             
-            if(right_side_clients.hasClass('open')){
                 $('a#open-clients-info').on( "click", function() {
+                if(right_side_clients.hasClass('open')){
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
                     $('html, body').animate({
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
+                }
                 });
-            }
         }
         
         else {
