@@ -137,7 +137,7 @@ $(document).ready(function(){
             $('a#open-clients-info').on( "click", setTimeout( function() {
                 right_side_form.toggleClass('open');
                 right_side_clients.toggleClass('open');
-            }, 300));
+            }, 700));
         }
         else{
             right_side_form.removeClass('open');
@@ -187,7 +187,7 @@ $(document).ready(function(){
             $('a#open-more-info').on( "click", setTimeout( function() {
                 right_side_clients.toggleClass('open');
                 right_side_form.toggleClass('open');
-            }, 300));
+            }, 700));
         }
         else{
             right_side_clients.removeClass('open');
