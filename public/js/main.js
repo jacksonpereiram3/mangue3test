@@ -102,7 +102,10 @@ $(document).ready(function(){
     */
     function toggleRightSideForm (status = null) {
         if (status === 'hidden') {
-            right_side_form.toggleClass('hidden');        
+            right_side_form.toggleClass('hidden');
+            if(right_side_form.hasClass('open')){
+                right_side_form.removeClass('open');
+            }
             
             right_side_form.toggleClass("hide-right");
             $("#close-right-side-form").toggleClass("hide-close");
@@ -151,6 +154,9 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
+            if(right_side_clients.hasClass('open')){
+                right_side_clients.removeClass('open');
+            }
             
             right_side_clients.toggleClass("hide-right-clients");
             $("#close-right-side-clients").toggleClass("hide-close");
