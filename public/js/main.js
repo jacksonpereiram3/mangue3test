@@ -104,27 +104,21 @@ $(document).ready(function(){
         if (status === 'hidden') {
             right_side_form.toggleClass('hidden');
             
-            setTimeout(function(){
                 right_side_form.toggleClass("hide-right");
                 $("#close-right-side-form").toggleClass("hide-close");
                 $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-                setTimeout(function() {
                     $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
                         scrollInertia:500,
                         callbacks:false
                     });
-                }, 350);
-            }, 100);
         } else {
             right_side_form.toggleClass("hide-right");
             $("#close-right-side-form").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            setTimeout(function() {
                 $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
                     scrollInertia:500,
                     callbacks:false
                 });
-            }, 350);
                 right_side_form.toggleClass('hidden');
         }
         if(!right_side_form.hasClass('hidden')){
@@ -155,28 +149,22 @@ $(document).ready(function(){
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
             
-            setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
                 $("#close-right-side-clients").toggleClass("hide-close");
                 $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-                setTimeout(function() {
                     $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
                         scrollInertia:500,
                         callbacks:false
                     });
-                }, 350);
-            }, 100);
         } else {
             right_side_clients.toggleClass("hide-right-clients");
             
             $("#close-right-side-clients").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            setTimeout(function() {
                 $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
                     scrollInertia:500,
                     callbacks:false
                 });
-            }, 350);
                 right_side_clients.toggleClass('hidden');
         }
         if(!right_side_clients.hasClass('hidden')){
