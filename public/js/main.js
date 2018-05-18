@@ -132,6 +132,7 @@ $(document).ready(function(){
                 right_side_clients.removeClass('open');
             }
             $('a#open-clients-info').on( "click", setTimeout( function() {
+                event.preventDefault();
                 right_side_form.removeClass('open');
                 right_side_clients.toggleClass('open');
                 var target = "#" + this.getAttribute('data-target');
@@ -182,6 +183,7 @@ $(document).ready(function(){
         else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden')){
             
             $('a#open-more-info').on( "click", setTimeout( function() {
+                event.preventDefault();
                 right_side_clients.removeClass('open');
                 right_side_form.toggleClass('open');
                 var target = "#" + this.getAttribute('data-target');
