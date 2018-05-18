@@ -114,7 +114,8 @@ $(document).ready(function(){
                 scrollInertia:500,
                 callbacks:false
             });
-        } else {
+        }
+        else {
             right_side_form.toggleClass("hide-right");
             $("#close-right-side-form").toggleClass("hide-close");
             $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
@@ -164,7 +165,8 @@ $(document).ready(function(){
                 scrollInertia:500,
                 callbacks:false
             });
-        } else {
+        }
+        else {
             right_side_clients.toggleClass("hide-right-clients");
             
             $("#close-right-side-clients").toggleClass("hide-close");
