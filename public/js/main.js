@@ -136,8 +136,8 @@ $(document).ready(function(){
         else if(right_side_form.hasClass('open')){
             $('a#open-clients-info').on( "click", setTimeout( function() {
                 right_side_form.toggleClass('open');
-                right_side_clients.toggleClass('open');
             }, 300));
+            right_side_clients.toggleClass('open');
         }
         else{
             right_side_form.removeClass('open');
@@ -186,8 +186,8 @@ $(document).ready(function(){
         else if(right_side_clients.hasClass('open')){
             $('a#open-more-info').on( "click", setTimeout( function() {
                 right_side_clients.toggleClass('open');
-                right_side_form.toggleClass('open');
             }, 300));
+            right_side_form.toggleClass('open');
         }
         else{
             right_side_clients.removeClass('open');
