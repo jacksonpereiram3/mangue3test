@@ -131,7 +131,7 @@ $(document).ready(function(){
             
             $('a#open-clients-info').on( "click", setTimeout( function() {
                 event.preventDefault();
-                right_side_form.removeClass('open');
+                right_side_form.toggleClass('open');
                 right_side_clients.toggleClass('open');
                 var target = "#" + this.getAttribute('data-target');
                 $('html, body').animate({
@@ -181,7 +181,7 @@ $(document).ready(function(){
             
             $('a#open-more-info').on( "click", setTimeout( function() {
                 event.preventDefault();
-                right_side_clients.removeClass('open');
+                right_side_clients.toggleClass('open');
                 right_side_form.toggleClass('open');
                 var target = "#" + this.getAttribute('data-target');
                 $('html, body').animate({
