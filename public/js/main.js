@@ -365,7 +365,7 @@ $(document).ready(function(){
                     var target = "#" + this.getAttribute('data-target');
                     $('html, body').animate({
                         scrollTop: $(target).offset().top
-                    }, 700, 'swing');
+                    }, 800, 'swing');
                 }
             });
             
@@ -375,7 +375,7 @@ $(document).ready(function(){
                     var target = "#" + this.getAttribute('data-target');
                     $('html, body').animate({
                         scrollTop: $(target).offset().top
-                    }, 700, 'swing');
+                    }, 800, 'swing');
                 }
             });
         }
