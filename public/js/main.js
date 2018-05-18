@@ -127,12 +127,13 @@ $(document).ready(function(){
             }, 350);
             setTimeout(function(){
                 right_side_form.toggleClass('hidden');
-               
+                
             }, 350);
         }
         if(!right_side_form.hasClass('hidden')){
             right_side_form.toggleClass('open');
-        }else{
+        }
+        else{
             right_side_form.removeClass('open');
         }
     }
@@ -146,7 +147,7 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
-           
+            
             setTimeout(function(){
                 right_side_clients.toggleClass("hide-right-clients");
                 $("#close-right-side-clients").toggleClass("hide-close");
@@ -175,7 +176,9 @@ $(document).ready(function(){
         }
         if(!right_side_clients.hasClass('hidden')){
             right_side_clients.toggleClass('open');
-        }else{
+            
+        }
+        else{
             right_side_clients.removeClass('open');
         }
     }
@@ -353,9 +356,9 @@ $(document).ready(function(){
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
                 }
-                });
+            });
             
-                $('a#open-clients-info').on( "click", function() {
+            $('a#open-clients-info').on( "click", function() {
                 if(right_side_clients.hasClass('open')){
                     event.preventDefault();
                     var target = "#" + this.getAttribute('data-target');
@@ -363,7 +366,7 @@ $(document).ready(function(){
                         scrollTop: $(target).offset().top
                     }, 700, 'swing');
                 }
-                });
+            });
         }
         
         else {
