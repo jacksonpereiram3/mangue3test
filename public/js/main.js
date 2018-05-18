@@ -128,9 +128,7 @@ $(document).ready(function(){
             right_side_form.toggleClass('open');
         }
         else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden')){
-            while(right_side_clients.hasClass('open') && right_side_clients.hasClass('hidden')){
-                right_side_clients.removeClass('open');
-            }
+            
             $('a#open-clients-info').on( "click", setTimeout( function() {
                 event.preventDefault();
                 right_side_form.removeClass('open');
