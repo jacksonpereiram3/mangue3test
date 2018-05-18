@@ -154,7 +154,7 @@ $(document).ready(function(){
     function toggleRightSideClients (status = null) {
         if (status === 'hidden') {
             right_side_clients.toggleClass('hidden');
-            if(right_side_clients.removeClass('open')){
+            if(right_side_clients.hasClass('open')){
                 right_side_clients.removeClass('open');
             }
             
