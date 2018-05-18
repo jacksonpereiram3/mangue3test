@@ -125,10 +125,7 @@ $(document).ready(function(){
                     callbacks:false
                 });
             }, 350);
-            setTimeout(function(){
                 right_side_form.toggleClass('hidden');
-                
-            }, 350);
         }
         if(!right_side_form.hasClass('hidden')){
             right_side_form.toggleClass('open');
@@ -180,9 +177,7 @@ $(document).ready(function(){
                     callbacks:false
                 });
             }, 350);
-            setTimeout(function(){
                 right_side_clients.toggleClass('hidden');
-            }, 500);
         }
         if(!right_side_clients.hasClass('hidden')){
             right_side_clients.toggleClass('open');
