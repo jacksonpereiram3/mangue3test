@@ -125,8 +125,8 @@ $(document).ready(function(){
             right_side_form.toggleClass('open');
         }
         else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden')){
-            while(right_side_form.hasClass('open') && right_side_form.hasClass('hidden')){
-                right_side_form.removeClass('open');
+            while(right_side_clients.hasClass('open') && right_side_clients.hasClass('hidden')){
+                right_side_clients.removeClass('open');
             }
             $('a#open-clients-info').on( "click", setTimeout( function() {
                 right_side_form.removeClass('open');
@@ -174,8 +174,8 @@ $(document).ready(function(){
             right_side_clients.toggleClass('open');
         }
         else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden')){
-            while(right_side_clients.hasClass('open') && right_side_clients.hasClass('hidden')){
-                right_side_clients.removeClass('open');
+            while(right_side_form.hasClass('open') && right_side_form.hasClass('hidden')){
+                right_side_form.removeClass('open');
             }
             $('a#open-more-info').on( "click", setTimeout( function() {
                 right_side_clients.removeClass('open');
