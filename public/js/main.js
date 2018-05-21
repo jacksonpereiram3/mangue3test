@@ -179,8 +179,8 @@ $(document).ready(function(){
             else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden') && !overlay.hasClass('skew-part')){
                 
                 $('a#open-clients-info').on( "click", setTimeout( function() {
-                    right_side_clients.toggleClass('open');
                     right_side_form.toggleClass('open');
+                    right_side_clients.toggleClass('open');
                 }, 200));
             }
             else{
@@ -277,8 +277,8 @@ $(document).ready(function(){
             else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden') && !overlay.hasClass('skew-part')){
                 
                 $('a#open-more-info').on( "click", setTimeout( function() {
-                    right_side_form.toggleClass('open');
                     right_side_clients.toggleClass('open');
+                    right_side_form.toggleClass('open');
                 }, 200));
             }
             else{
