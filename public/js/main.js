@@ -182,7 +182,7 @@ $(document).ready(function(){
                     right_side_form.toggleClass('open');
                     setTimeout( function() {
                         right_side_clients.toggleClass('open');
-                    }, 300);
+                    }, 1000);
                 }, 0));
             }
             else{
@@ -282,7 +282,7 @@ $(document).ready(function(){
                     right_side_clients.toggleClass('open');
                     setTimeout( function() {
                         right_side_form.toggleClass('open');
-                    }, 300);
+                    }, 1000);
                 }, 0));
             }
             else{
