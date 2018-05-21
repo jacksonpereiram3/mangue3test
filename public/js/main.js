@@ -181,8 +181,8 @@ $(document).ready(function(){
                 $('a#open-clients-info').on( "click", setTimeout( function() {
                     right_side_form.toggleClass('open');
                     setTimeout( function() {
-                        right_side_clients.toggleClass('open');
-                    }, 1000);
+                        right_side_clients.slideToggle(500);
+                    }, 300);
                 }, 0));
             }
             else{
@@ -281,8 +281,8 @@ $(document).ready(function(){
                 $('a#open-more-info').on( "click", setTimeout( function() {
                     right_side_clients.toggleClass('open');
                     setTimeout( function() {
-                        right_side_form.toggleClass('open');
-                    }, 1000);
+                        right_side_form.slideToggle(500);
+                    }, 300);
                 }, 0));
             }
             else{
