@@ -153,47 +153,49 @@ $(document).ready(function(){
     * 
     */
     function toggleRightSideClients (status = null) {
-        if (status === 'hidden') {
-            right_side_clients.toggleClass('hidden');
-            if(right_side_clients.hasClass('open')){
+        if(ifTouchDevices){
+            if (status === 'hidden') {
+                right_side_clients.toggleClass('hidden');
+                if(right_side_clients.hasClass('open')){
+                    right_side_clients.removeClass('open');
+                }
+                
+                right_side_clients.toggleClass("hide-right-clients");
+                $("#close-right-side-clients").toggleClass("hide-close");
+                $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+                $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
+                    scrollInertia:500,
+                    callbacks:false
+                });
+            }
+            else {
+                right_side_clients.toggleClass("hide-right-clients");
+                
+                $("#close-right-side-clients").toggleClass("hide-close");
+                $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+                $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
+                    scrollInertia:500,
+                    callbacks:false
+                });
+                right_side_clients.toggleClass('hidden');
+            }
+            if(!right_side_clients.hasClass('hidden')){
+                right_side_clients.toggleClass('open');
+            }
+            else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden')){
+                
+                $('a#open-more-info').on( "click", setTimeout( function() {
+                    right_side_clients.removeClass('open');
+                    right_side_form.toggleClass('open');
+                    var target = "#" + this.getAttribute('data-target');
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 500, 'swing');
+                }, 0));
+            }
+            else{
                 right_side_clients.removeClass('open');
             }
-            
-            right_side_clients.toggleClass("hide-right-clients");
-            $("#close-right-side-clients").toggleClass("hide-close");
-            $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
-                scrollInertia:500,
-                callbacks:false
-            });
-        }
-        else {
-            right_side_clients.toggleClass("hide-right-clients");
-            
-            $("#close-right-side-clients").toggleClass("hide-close");
-            $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
-            $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side-clients",{
-                scrollInertia:500,
-                callbacks:false
-            });
-            right_side_clients.toggleClass('hidden');
-        }
-        if(!right_side_clients.hasClass('hidden')){
-            right_side_clients.toggleClass('open');
-        }
-        else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden')){
-            
-            $('a#open-more-info').on( "click", setTimeout( function() {
-                right_side_clients.removeClass('open');
-                right_side_form.toggleClass('open');
-                var target = "#" + this.getAttribute('data-target');
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 500, 'swing');
-            }, 0));
-        }
-        else{
-            right_side_clients.removeClass('open');
         }
     }
     
