@@ -176,16 +176,13 @@ $(document).ready(function(){
             if(!right_side_form.hasClass('hidden')){
                 right_side_form.toggleClass('open');
             }
-            else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden')){
+            else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden') && !overlay.hasClass('skew-part')){
                 
-                $('a#open-clients-info').on( "click", setTimeout( function() {
-                    right_side_form.removeClass('open');
+                $('a#open-more-info').on( "click", setTimeout( function() {
+                    overlay.toggleClass('skew-part');
                     right_side_clients.toggleClass('open');
-                    var target = "#" + this.getAttribute('data-target');
-                    $('html, body').animate({
-                        scrollTop: $(target).offset().top
-                    }, 500, 'swing');
-                }, 0));
+                    right_side_form.toggleClass('open');
+                }, 200));
             }
             else{
                 right_side_form.removeClass('open');
@@ -278,16 +275,13 @@ $(document).ready(function(){
             if(!right_side_clients.hasClass('hidden')){
                 right_side_clients.toggleClass('open');
             }
-            else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden')){
+            else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden') && !overlay.hasClass('skew-part')){
                 
                 $('a#open-more-info').on( "click", setTimeout( function() {
-                    right_side_clients.removeClass('open');
+                    overlay.toggleClass('skew-part');
                     right_side_form.toggleClass('open');
-                    var target = "#" + this.getAttribute('data-target');
-                    $('html, body').animate({
-                        scrollTop: $(target).offset().top
-                    }, 500, 'swing');
-                }, 0));
+                    right_side_clients.toggleClass('open');
+                }, 200));
             }
             else{
                 right_side_clients.removeClass('open');
