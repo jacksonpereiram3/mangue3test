@@ -144,6 +144,51 @@ $(document).ready(function(){
                 right_side_form.removeClass('open');
             }
         }
+
+        else{
+            if (status === 'hidden') {
+                right_side_form.toggleClass('hidden');
+                
+                setTimeout(function(){
+                    right_side_form.toggleClass("hide-right");
+                    $("#close-right-side-form").toggleClass("hide-close");
+                    $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+                    setTimeout(function() {
+                        $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+                            scrollInertia:500,
+                            callbacks:false
+                        });
+                    }, 350);
+                }, 100);
+            } else {
+                right_side_form.toggleClass("hide-right");
+                $("#close-right-side-form").toggleClass("hide-close");
+                $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+                setTimeout(function() {
+                    $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+                        scrollInertia:500,
+                        callbacks:false
+                    });
+                }, 350);
+                setTimeout(function(){
+                    right_side_form.toggleClass('hidden');
+                    
+                }, 350);
+            }
+            if(!right_side_form.hasClass('hidden')){
+                right_side_form.toggleClass('open');
+            }
+            else if(right_side_form.hasClass('open') && right_side_form.hasClass('hidden')){
+                $('a#open-form-info').on( "click", setTimeout( function() {
+                    right_side_form.toggleClass('open');
+                    right_side_clients.toggleClass('open');
+                }, 700));
+            }
+            else{
+                right_side_form.removeClass('open');
+            }
+        }
+
     }
     
     /**
@@ -197,6 +242,51 @@ $(document).ready(function(){
                 right_side_clients.removeClass('open');
             }
         }
+
+        else{
+            if (status === 'hidden') {
+                right_side_clients.toggleClass('hidden');
+                
+                setTimeout(function(){
+                    right_side_clients.toggleClass("hide-right");
+                    $("#close-right-side-clients").toggleClass("hide-close");
+                    $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+                    setTimeout(function() {
+                        $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+                            scrollInertia:500,
+                            callbacks:false
+                        });
+                    }, 350);
+                }, 100);
+            } else {
+                right_side_clients.toggleClass("hide-right");
+                $("#close-right-side-clients").toggleClass("hide-close");
+                $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
+                setTimeout(function() {
+                    $("#mcs_container").mCustomScrollbar("scrollTo", "#right-side",{
+                        scrollInertia:500,
+                        callbacks:false
+                    });
+                }, 350);
+                setTimeout(function(){
+                    right_side_clients.toggleClass('hidden');
+                    
+                }, 350);
+            }
+            if(!right_side_clients.hasClass('hidden')){
+                right_side_clients.toggleClass('open');
+            }
+            else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden')){
+                $('a#open-clients-info').on( "click", setTimeout( function() {
+                    right_side_clients.toggleClass('open');
+                    right_side_form.toggleClass('open');
+                }, 700));
+            }
+            else{
+                right_side_clients.removeClass('open');
+            }
+        }
+
     }
     
     /**
