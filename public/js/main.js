@@ -233,7 +233,7 @@ $(document).ready(function(){
             if (status === 'hidden') {
                 right_side_clients.toggleClass('hidden');
                 setTimeout(function(){
-                    right_side_clients.toggleClass("hide-right");
+                    right_side_clients.toggleClass("hide-right-clients");
                     $("#close-right-side-clients").toggleClass("hide-close");
                     $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
                     setTimeout(function() {
@@ -244,7 +244,7 @@ $(document).ready(function(){
                     }, 350);
                 }, 100);
             } else {
-                right_side_clients.toggleClass("hide-right");
+                right_side_clients.toggleClass("hide-right-clients");
                 $("#close-right-side-clients").toggleClass("hide-close");
                 $('.mCSB_scrollTools').toggleClass('mCSB_scrollTools-left');
                 setTimeout(function() {
