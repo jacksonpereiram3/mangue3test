@@ -307,7 +307,7 @@ $(document).ready(function(){
                 {
                     duration: 1000,
                     easing: [0.7,0,0.3,1],
-                    delay: 500,
+                    delay: 0,
                 })
             }
         })
