@@ -312,9 +312,11 @@ $(document).ready(function(){
         else if ( right_side_form_is_hiden && !overlay_has_skew_part && !right_side_clients_is_hiden ) {
             setTimeout( function() {
                 toggleRightSideClients('hidden');
+                overlay.toggleClass('skew-part');
             }, 800);
             setTimeout( function() {
                 toggleRightSideForm();
+                overlay.toggleClass('skew-part');
             }, 1000);
         } else if ( right_side_form_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
@@ -341,9 +343,11 @@ $(document).ready(function(){
         else if ( right_side_clients_is_hiden && !overlay_has_skew_part && !right_side_form_is_hiden ) {
             setTimeout( function() {
                 toggleRightSideForm('hidden');
+                overlay.toggleClass('skew-part');
             }, 800); 
             setTimeout( function() {
                 toggleRightSideClients();
+                overlay.toggleClass('skew-part');
             }, 1000); 
         } else if ( right_side_clients_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
