@@ -184,7 +184,7 @@ $(document).ready(function(){
                             overlay.toggleClass();
                             right_side_clients.toggleClass();
                         }, 1300);
-                    }, 0));
+                    }, 600));
                 }
                 else{
                     right_side_form.removeClass('open');
@@ -286,7 +286,7 @@ $(document).ready(function(){
                             overlay.toggleClass();
                             right_side_form.toggleClass();
                         }, 1500);
-                    }, 0));
+                    }, 600));
                 }
                 else{
                     right_side_clients.removeClass('open');
