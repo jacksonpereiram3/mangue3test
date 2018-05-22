@@ -179,9 +179,10 @@ $(document).ready(function(){
                     
                     $('a#open-clients-info').on( "click", setTimeout( function() {
                         right_side_form.toggleClass('open');
+                        overlay.toggleClass('skew-part');
                         setTimeout( function() {
-                            right_side_clients.slideToggle(500);
-                        }, 1000);
+                            right_side_clients.toggleClass();
+                        }, 1300);
                     }, 0));
                 }
                 else{
@@ -279,9 +280,10 @@ $(document).ready(function(){
                     
                     $('a#open-more-info').on( "click", setTimeout( function() {
                         right_side_clients.toggleClass('open');
+                        overlay.toggleClass('skew-part')
                         setTimeout( function() {
-                            right_side_form.slideToggle(500);
-                        }, 1000);
+                            right_side_form.toggleClass();
+                        }, 1500);
                     }, 0));
                 }
                 else{
