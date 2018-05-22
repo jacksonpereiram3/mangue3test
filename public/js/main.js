@@ -315,7 +315,7 @@ $(document).ready(function(){
             }, 800);
             setTimeout( function() {
                 toggleRightSideForm();
-            }, 800);
+            }, 1000);
         } else if ( right_side_form_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideForm('hidden');
@@ -344,7 +344,7 @@ $(document).ready(function(){
             }, 800); 
             setTimeout( function() {
                 toggleRightSideClients();
-            }, 800); 
+            }, 1000); 
         } else if ( right_side_clients_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideClients('hidden');
