@@ -183,8 +183,8 @@ $(document).ready(function(){
                         setTimeout( function() {
                             overlay.toggleClass();
                             right_side_clients.toggleClass();
-                        }, 500);
-                    }, 600));
+                        }, 700);
+                    }, 1000));
                 }
                 else{
                     right_side_form.removeClass('open');
@@ -285,8 +285,8 @@ $(document).ready(function(){
                         setTimeout( function() {
                             overlay.toggleClass();
                             right_side_form.toggleClass();
-                        }, 500);
-                    }, 600));
+                        }, 700);
+                    }, 1000));
                 }
                 else{
                     right_side_clients.removeClass('open');
