@@ -183,7 +183,7 @@ $(document).ready(function(){
                         setTimeout( function() {
                             overlay.toggleClass();
                             right_side_clients.toggleClass();
-                        }, 500);
+                        }, 1300);
                     }, 600));
                 }
                 else{
@@ -285,7 +285,7 @@ $(document).ready(function(){
                         setTimeout( function() {
                             overlay.toggleClass();
                             right_side_form.toggleClass();
-                        }, 500);
+                        }, 1300);
                     }, 600));
                 }
                 else{
