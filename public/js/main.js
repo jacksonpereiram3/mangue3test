@@ -181,6 +181,7 @@ $(document).ready(function(){
                         right_side_form.toggleClass('open');
                         overlay.toggleClass('skew-part');
                         setTimeout( function() {
+                            overlay.toggleClass();
                             right_side_clients.toggleClass();
                         }, 1300);
                     }, 0));
@@ -280,8 +281,9 @@ $(document).ready(function(){
                     
                     $('a#open-more-info').on( "click", setTimeout( function() {
                         right_side_clients.toggleClass('open');
-                        overlay.toggleClass('skew-part')
+                        overlay.toggleClass('skew-part');
                         setTimeout( function() {
+                            overlay.toggleClass();
                             right_side_form.toggleClass();
                         }, 1500);
                     }, 0));
