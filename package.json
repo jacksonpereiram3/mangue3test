@@ -1,22 +1,23 @@
 {
-  "name": "mylead-web-prod",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "local-minifier",
+  "version": "0.1.0",
+  "description": "A local environment to minify CSS, JS, & HTML files",
+  "license": "Apache-2.0",
+  "author": "Amardeep Rai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/myLead/mylead-web-prod.git"
+    "url": "https://github.com/amardeeprai/local-minifier"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/myLead/mylead-web-prod/issues"
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "^2.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2"
   },
-  "homepage": "https://github.com/myLead/mylead-web-prod#readme",
-  "dependencies": {
-    "express": "^4.16.2"
+  "engines": {
+    "node": ">=0.12.0"
   }
 }
