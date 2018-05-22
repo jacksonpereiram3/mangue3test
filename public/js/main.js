@@ -172,21 +172,21 @@ $(document).ready(function(){
                 setTimeout(function(){
                     right_side_form.toggleClass('hidden');
                 }, 500);
-            }
-            if(!right_side_form.hasClass('hidden')){
-                right_side_form.toggleClass('open');
-            }
-            else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden') && !overlay.hasClass('skew-part')){
-                
-                $('a#open-clients-info').on( "click", setTimeout( function() {
+                if(!right_side_form.hasClass('hidden')){
                     right_side_form.toggleClass('open');
-                    setTimeout( function() {
-                        right_side_clients.slideToggle(500);
-                    }, 1000);
-                }, 0));
-            }
-            else{
-                right_side_form.removeClass('open');
+                }
+                else if(right_side_form.hasClass('open') && right_side_clients.hasClass('hidden') && !overlay.hasClass('skew-part')){
+                    
+                    $('a#open-clients-info').on( "click", setTimeout( function() {
+                        right_side_form.toggleClass('open');
+                        setTimeout( function() {
+                            right_side_clients.slideToggle(500);
+                        }, 1000);
+                    }, 0));
+                }
+                else{
+                    right_side_form.removeClass('open');
+                }
             }
         }
         
@@ -272,21 +272,21 @@ $(document).ready(function(){
                 setTimeout(function(){
                     right_side_clients.toggleClass('hidden');
                 }, 500);
-            }
-            if(!right_side_clients.hasClass('hidden')){
-                right_side_clients.toggleClass('open');
-            }
-            else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden') && !overlay.hasClass('skew-part')){
-                
-                $('a#open-more-info').on( "click", setTimeout( function() {
+                if(!right_side_clients.hasClass('hidden')){
                     right_side_clients.toggleClass('open');
-                    setTimeout( function() {
-                        right_side_form.slideToggle(500);
-                    }, 1000);
-                }, 0));
-            }
-            else{
-                right_side_clients.removeClass('open');
+                }
+                else if(right_side_clients.hasClass('open') && right_side_form.hasClass('hidden') && !overlay.hasClass('skew-part')){
+                    
+                    $('a#open-more-info').on( "click", setTimeout( function() {
+                        right_side_clients.toggleClass('open');
+                        setTimeout( function() {
+                            right_side_form.slideToggle(500);
+                        }, 1000);
+                    }, 0));
+                }
+                else{
+                    right_side_clients.removeClass('open');
+                }
             }
             
         }
