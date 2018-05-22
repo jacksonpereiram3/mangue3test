@@ -179,10 +179,9 @@ $(document).ready(function(){
                     
                     $('a#open-clients-info').on( "click", setTimeout( function() {
                         right_side_form.toggleClass('open');
-                        overlay.toggleClass('skew-part');
+                        overlay.toggleClass();
                         setTimeout( function() {
-                            overlay.toggleClass();
-                            right_side_clients.toggleClass();
+                            right_side_clients.toggleClass('open');
                         }, 1300);
                     }, 600));
                 }
@@ -281,10 +280,9 @@ $(document).ready(function(){
                     
                     $('a#open-more-info').on( "click", setTimeout( function() {
                         right_side_clients.toggleClass('open');
-                        overlay.toggleClass('skew-part');
                         setTimeout( function() {
                             overlay.toggleClass();
-                            right_side_form.toggleClass();
+                            right_side_form.toggleClass('open');
                         }, 1300);
                     }, 600));
                 }
