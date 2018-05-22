@@ -310,8 +310,12 @@ $(document).ready(function(){
             toggleRightSideForm();
         } 
         else if ( right_side_form_is_hiden && !overlay_has_skew_part && !right_side_clients_is_hiden ) {
-            toggleRightSideClients('hidden');
-            toggleRightSideForm();
+            setTimeout( function() {
+                toggleRightSideClients('hidden');
+            }, 800);
+            setTimeout( function() {
+                toggleRightSideForm();
+            }, 800);
         } else if ( right_side_form_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideForm('hidden');
@@ -335,8 +339,12 @@ $(document).ready(function(){
             toggleRightSideClients();
         } 
         else if ( right_side_clients_is_hiden && !overlay_has_skew_part && !right_side_form_is_hiden ) {
-            toggleRightSideForm('hidden');
-            toggleRightSideClients();
+            setTimeout( function() {
+                toggleRightSideForm('hidden');
+            }, 800); 
+            setTimeout( function() {
+                toggleRightSideClients();
+            }, 800); 
         } else if ( right_side_clients_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideClients('hidden');
