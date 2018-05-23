@@ -100,7 +100,7 @@ $(document).ready(function(){
     * @param {string} status 
     * 
     */
-    function toggleRightSideForm (status = null) {
+    function toggleRightSideForm (status) {
         if(ifTouchDevices){
             if (status === 'hidden') {
                 right_side_form.toggleClass('hidden');
@@ -198,7 +198,7 @@ $(document).ready(function(){
     * @param {string} status  
     * 
     */
-    function toggleRightSideClients (status = null) {
+    function toggleRightSideClients (status) {
         if(ifTouchDevices){
             if (status === 'hidden') {
                 right_side_clients.toggleClass('hidden');
@@ -307,18 +307,15 @@ $(document).ready(function(){
     function switchToggleForm (right_side_form_is_hiden, right_side_clients_is_hiden, overlay_has_skew_part){
         if ( !right_side_form_is_hiden && !overlay_has_skew_part ) {
             overlay.toggleClass('skew-part');
-            toggleRightSideForm();
+            toggleRightSideForm('open');
         } 
         else if ( right_side_form_is_hiden && !overlay_has_skew_part && !right_side_clients_is_hiden ) {
-            setTimeout( function() {
                 toggleRightSideClients('hidden');
                 overlay.toggleClass('skew-part');
-            }, 800);
-            setTimeout( function() {
-                toggleRightSideForm();
+                toggleRightSideForm('open');
                 overlay.toggleClass('skew-part');
-            }, 1000);
-        } else if ( right_side_form_is_hiden && overlay_has_skew_part  ) {
+        }
+        else if ( right_side_form_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideForm('hidden');
         }
@@ -341,15 +338,12 @@ $(document).ready(function(){
             toggleRightSideClients();
         } 
         else if ( right_side_clients_is_hiden && !overlay_has_skew_part && !right_side_form_is_hiden ) {
-            setTimeout( function() {
                 toggleRightSideForm('hidden');
                 overlay.toggleClass('skew-part');
-            }, 800); 
-            setTimeout( function() {
                 toggleRightSideClients();
                 overlay.toggleClass('skew-part');
-            }, 1000); 
-        } else if ( right_side_clients_is_hiden && overlay_has_skew_part  ) {
+        }
+        else if ( right_side_clients_is_hiden && overlay_has_skew_part  ) {
             overlay.toggleClass('skew-part');
             toggleRightSideClients('hidden');
         }
